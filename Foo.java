@@ -7,6 +7,13 @@ public class Foo {
 
     void printBarData() {
         System.out.println("-------- Bar Data --------");
-        System.out.println(bar.getData());
+        printBarWithNullCheck();
+    }
+
+    void printBarWithNullCheck() {
+        String data = bar.getData();
+        if (data != null) {
+            System.out.println(data);
+        }
     }
 }
